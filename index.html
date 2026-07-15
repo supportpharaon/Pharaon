@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pharaon — The memory engine for students</title>
+  <meta name="description" content="Pharaon is a free study calendar that plans itself: a scientific memory engine schedules every review at the right moment so you never forget what you learn. Windows, 100% local, no account." />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pharaon — The memory engine for students" />
+  <meta property="og:description" content="A study calendar that plans itself. Free, private, no account needed." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/shots/today.png" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="stylesheet" href="assets/fonts/dm-sans.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <img src="assets/logo.png" alt="" class="brand-logo" />
+      <span>phar&#257;on</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#science">How it works</a>
+      <a href="#screenshots">Screenshots</a>
+      <a href="#faq">FAQ</a>
+      <a href="#download" class="nav-cta">Download</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-badge">Free · Windows 10/11 · No account required</div>
+    <h1>The study calendar<br/>that <em>plans itself</em>.</h1>
+    <p class="hero-sub">Pharaon is a personal <strong>memory engine</strong>: tell it what you're studying and it
+    decides <em>when</em> — scheduling every review at the scientifically right moment, balancing your days,
+    preparing you for exams, and making sure nothing you learn is ever forgotten.</p>
+
+    <div class="cta-row" id="download">
+      <!-- To publish: upload dist/PharaonSetup.exe and dist/Pharaon.exe to a GitHub Release,
+           then keep these /releases/latest/download/ links (update org/repo if different). -->
+      <a class="btn-dl primary" href="https://github.com/supportpharaon/Pharaon/releases/latest/download/PharaonSetup.exe">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M10 3v10M6 9l4 4 4-4M4 16h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Download for Windows
+        <span class="dl-meta">Installer · v1.0.0 · 13 MB</span>
+      </a>
+      <a class="btn-dl ghost" href="https://github.com/supportpharaon/Pharaon/releases/latest/download/Pharaon.exe">
+        Portable version
+        <span class="dl-meta">Single .exe · 14 MB · no install</span>
+      </a>
+    </div>
+
+    <div class="trust-bar">
+      <div class="trust-item">🔒 <b>100% private</b><span>your data never leaves your computer</span></div>
+      <div class="trust-item">🗝️ <b>No account</b><span>download, open, study</span></div>
+      <div class="trust-item">💾 <b>Auto-backups</b><span>daily, kept locally</span></div>
+      <div class="trust-item">🧾 <b>Verifiable</b><span><a href="#security">SHA-256 checksums</a></span></div>
+    </div>
+
+    <div class="hero-shot">
+      <img src="assets/shots/today.png" alt="Pharaon Today view — the day's study sessions, exams this week, and workouts, planned automatically" loading="eager" />
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROBLEM / WHY ═══ -->
+<section class="sec" id="why">
+  <div class="wrap narrow">
+    <div class="sec-label">WHY PHARAON EXISTS</div>
+    <h2>Built by students, for students.</h2>
+    <p>A term means many subjects, each with dozens of topics — and every topic needs to be revisited
+    several times, at the right moments, or it quietly fades. Organising those sessions by hand is
+    practically impossible: plain calendars don't know how memory works, and flashcard apps don't plan
+    your days. The result is always the same — crammed weeks before exams, empty weeks after them, and
+    material studied in October that has vanished by June.</p>
+    <p><strong>Pharaon closes that gap.</strong> It combines a research-backed model of human memory with a
+    scheduling optimizer, so every study session lands exactly where it does the most good — with zero
+    planning effort from you.</p>
+  </div>
+</section>
+
+<!-- ═══ FEATURES ═══ -->
+<section class="sec alt" id="features">
+  <div class="wrap">
+    <div class="sec-label">WHAT IT DOES</div>
+    <h2>Everything a studying brain needs.</h2>
+    <div class="grid">
+      <div class="card"><div class="card-ic">🧠</div><h3>A real memory model</h3>
+        <p>Each topic carries a scientific memory state — stability and recall probability on the forgetting
+        curve. Rate each session honestly and watch topics climb the ladder: New → Learning → Developing →
+        Established → Solid → Mastered.</p></div>
+      <div class="card"><div class="card-ic">📅</div><h3>Self-optimizing calendar</h3>
+        <p>The planner solves your next two weeks as one optimization problem: maximum long-term retention per
+        minute of study, evenly balanced days, mixed subjects, bounded fatigue. Every session shows <em>why</em>
+        it's on its day.</p></div>
+      <div class="card"><div class="card-ic">🎯</div><h3>Exam readiness</h3>
+        <p>Link topics to an exam and reviews intensify automatically as the date approaches — with a guaranteed
+        final pass and a <b>readiness&nbsp;%</b> predicting your recall on exam morning.</p></div>
+      <div class="card"><div class="card-ic">📈</div><h3>It learns you</h3>
+        <p>After every review, the engine compares its prediction to what actually happened and calibrates
+        itself. Remember better than the model expects? All intervals stretch. It adapts for as long as you
+        use it.</p></div>
+      <div class="card"><div class="card-ic">🏖️</div><h3>Life-proof planning</h3>
+        <p>Days off, reduced days and topic restrictions reshape the plan instantly. Missed sessions come back
+        the next morning as catch-ups, most fragile first. Pin or add sessions by hand — the engine plans
+        around you, never over you.</p></div>
+      <div class="card"><div class="card-ic">🏋️</div><h3>Fitness Hub</h3>
+        <p>Sports, workouts and exercises live on the same calendar — with optional smart scheduling that spaces
+        workouts by how hard the last one felt.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SCIENCE ═══ -->
+<section class="sec" id="science">
+  <div class="wrap narrow">
+    <div class="sec-label">HOW IT WORKS</div>
+    <h2>Reviewed at the moment it matters.</h2>
+    <p>Human memory follows a <strong>forgetting curve</strong>: after you study something, the probability of
+    recalling it decays — quickly at first, slower each time you successfully review. Pharaon tracks that curve
+    for every topic and schedules the next session precisely where reviewing is most efficient: late enough to
+    strengthen the memory deeply, early enough that you still succeed.</p>
+    <p>Each well-timed review <strong>multiplies</strong> how long the memory lasts. Intervals stretch from days
+    to weeks to months — so the total work per topic <em>shrinks</em> over time while retention stays above your
+    target. Around that core, an optimizer distributes the load: no ten-session Mondays next to empty Tuesdays,
+    no subject monotony, no overload before exams that could have been smoothed.</p>
+    <p class="fine">The full mathematical specification of the engine ships with the project
+    (<code>ENGINE.md</code>) — nothing about how your study plan is computed is a black box.</p>
+  </div>
+</section>
+
+<!-- ═══ SCREENSHOTS ═══ -->
+<section class="sec alt" id="screenshots">
+  <div class="wrap">
+    <div class="sec-label">SCREENSHOTS</div>
+    <h2>Calm, minimal, yours.</h2>
+    <div class="shots">
+      <figure><img src="assets/shots/today.png" alt="Today view" loading="lazy"/><figcaption>Today — sessions triaged by memory fragility, exams this week, workouts</figcaption></figure>
+      <figure><img src="assets/shots/calendar.png" alt="Calendar view" loading="lazy"/><figcaption>Calendar — subject-coloured sessions, exams, availability and workouts in one place</figcaption></figure>
+      <figure><img src="assets/shots/topics.png" alt="Subjects and topics" loading="lazy"/><figcaption>Subjects &amp; Topics — memory levels and live recall estimates per topic</figcaption></figure>
+      <figure><img src="assets/shots/exams.png" alt="Exams view" loading="lazy"/><figcaption>Exams — countdowns and readiness predicted for exam morning</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ VOICES ═══ -->
+<section class="sec" id="voices">
+  <div class="wrap">
+    <div class="sec-label">FROM OUR BETA CIRCLE</div>
+    <h2>What early users tell us.</h2>
+    <div class="grid three">
+      <div class="quote"><p>“I stopped thinking about <em>when</em> to study. I open it, do the list, close it.
+        The day before my analysis exam it had already lined everything up.”</p><span>— Beta tester, engineering student</span></div>
+      <div class="quote"><p>“The part that sold me is seeing <em>why</em> each session is there. It doesn't feel
+        random — it feels like someone competent planned my week.”</p><span>— Beta tester, medicine student</span></div>
+      <div class="quote"><p>“Topics I studied months ago keep coming back right before I'd forget them.
+        That never happened with my old system.”</p><span>— Founding team</span></div>
+    </div>
+    <p class="fine center">Using Pharaon? We'd love to feature your experience —
+      <a href="mailto:support.pharaon@gmail.com?subject=%5BPharaon%5D%20My%20review">send us your review</a>.</p>
+  </div>
+</section>
+
+<!-- ═══ SECURITY & PRIVACY ═══ -->
+<section class="sec alt" id="security">
+  <div class="wrap narrow">
+    <div class="sec-label">SECURITY &amp; PRIVACY</div>
+    <h2>Your data stays yours. Verifiably.</h2>
+    <ul class="sec-list">
+      <li><b>Local-only.</b> Everything is stored in a local database on your computer
+        (<code>%APPDATA%\Pharaon</code>). No servers, no telemetry, no analytics, no account.</li>
+      <li><b>Automatic backups.</b> A daily backup is kept locally (last 7), and you can export/import a full
+        JSON backup anytime.</li>
+      <li><b>Verify your download.</b> After downloading, confirm the file is genuine by comparing its SHA-256
+        checksum (PowerShell: <code>Get-FileHash .\PharaonSetup.exe</code>):</li>
+    </ul>
+    <div class="hash-box">
+      <div><span class="hash-name">PharaonSetup.exe</span><code>97F1F680FFDBD06E559A205D89E7CA90B54D9EBA3D11DDB713452701E44C3D50</code></div>
+      <div><span class="hash-name">Pharaon.exe (portable)</span><code>00E9A6E9D5C3C7E31944F5A46910A73E863780B54DC0F4F1D61FEF1122F7D69B</code></div>
+    </div>
+    <p class="fine"><b>About the Windows warning:</b> Pharaon is an independent student project and is not yet
+    code-signed (certificates are costly). Windows SmartScreen may therefore show “Windows protected your PC”
+    on first run — choose <em>More info → Run anyway</em> after verifying the checksum above. The full source
+    of truth for what the app does ships with it.</p>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="sec" id="faq">
+  <div class="wrap narrow">
+    <div class="sec-label">FAQ</div>
+    <h2>Questions, answered.</h2>
+    <details><summary>Is Pharaon really free?</summary><p>Yes. Pharaon is free to download and use. It was built
+      by students to solve our own problem; we want other students to benefit.</p></details>
+    <details><summary>Does it work offline?</summary><p>Completely. Pharaon never needs an internet
+      connection — everything, including the scheduling engine, runs on your machine.</p></details>
+    <details><summary>Installer or portable — which one?</summary><p>The <b>installer</b> adds a Start-menu
+      entry, an uninstaller and optional launch-at-startup. The <b>portable</b> version is a single .exe you can
+      run from anywhere (even a USB stick) with no installation. Both store data in the same place, so you can
+      switch freely.</p></details>
+    <details><summary>What happens if I miss a day?</summary><p>Nothing is lost. The next morning, missed
+      sessions come back as catch-ups — most fragile memories first — and the whole plan rebalances
+      automatically, respecting your daily limits.</p></details>
+    <details><summary>Can I move sessions myself?</summary><p>Yes — skip a session to the next open day, pin it
+      to any date (the engine will never move a pinned session), or add extra sessions on top of the plan. The
+      optimizer replans everything else around your choices.</p></details>
+    <details><summary>How is this different from a flashcard app?</summary><p>Flashcard apps space individual
+      cards but don't plan your days. Pharaon works at the <em>topic</em> level and builds your actual daily
+      calendar — balancing workload, exams, days off and your other commitments in one plan.</p></details>
+    <details><summary>Where is my data? Can I take it with me?</summary><p>In a local database at
+      <code>%APPDATA%\Pharaon</code>. Settings → Data lets you export a full JSON backup and import it on any
+      other machine.</p></details>
+    <details><summary>I found a bug / I have an idea.</summary><p>Wonderful — tell us! Use
+      <a href="mailto:support.pharaon@gmail.com?subject=%5BPharaon%5D%20Bug%20report">Report a bug</a> or
+      <a href="mailto:support.pharaon@gmail.com?subject=%5BPharaon%5D%20Support%20request">Contact support</a>.
+      Errors are also logged locally (<code>%APPDATA%\Pharaon\logs</code>) to help us help you.</p></details>
+  </div>
+</section>
+
+<!-- ═══ FINAL CTA ═══ -->
+<section class="sec alt center" id="get">
+  <div class="wrap narrow center">
+    <h2>Study. Rate. Forget nothing.</h2>
+    <p class="hero-sub">Free for Windows 10/11 · no account · your data never leaves your computer</p>
+    <div class="cta-row center">
+      <a class="btn-dl primary" href="https://github.com/supportpharaon/Pharaon/releases/latest/download/PharaonSetup.exe">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M10 3v10M6 9l4 4 4-4M4 16h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Download Pharaon
+        <span class="dl-meta">v1.0.0 · Windows installer</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div>
+      <div class="brand small"><img src="assets/logo.png" alt="" class="brand-logo"/><span>phar&#257;on</span></div>
+      <p class="fine">The memory engine for students.<br/>Built with care by students, for students.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#download">Download</a>
+      <a href="#security">Security &amp; privacy</a>
+      <a href="#faq">FAQ</a>
+      <a href="mailto:support.pharaon@gmail.com?subject=%5BPharaon%5D%20Bug%20report">Report a bug</a>
+      <a href="mailto:support.pharaon@gmail.com?subject=%5BPharaon%5D%20Support%20request">Contact support</a>
+    </div>
+    <div class="fine right">v1.0.0<br/>support.pharaon@gmail.com</div>
+  </div>
+</footer>
+
+<!-- Lightbox for screenshots (vanilla, self-contained) -->
+<div class="lightbox" id="lightbox" hidden><img id="lightboxImg" alt=""/></div>
+<script>
+  const lb = document.getElementById('lightbox'), lbi = document.getElementById('lightboxImg');
+  document.querySelectorAll('.shots img, .hero-shot img').forEach(img => {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', () => { lbi.src = img.src; lb.hidden = false; document.body.style.overflow = 'hidden'; });
+  });
+  lb.addEventListener('click', () => { lb.hidden = true; document.body.style.overflow = ''; });
+</script>
+</body>
+</html>

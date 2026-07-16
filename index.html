@@ -43,18 +43,20 @@
     preparing you for exams, and making sure nothing you learn is ever forgotten.</p>
 
     <div class="cta-row" id="download">
-      <!-- To publish: upload dist/PharaonSetup.exe and dist/Pharaon.exe to a GitHub Release,
-           then keep these /releases/latest/download/ links (update org/repo if different). -->
-      <a class="btn-dl primary" href="https://github.com/supportpharaon/Pharaon/releases/latest/download/PharaonSetup.exe">
+      <!-- Assets live on the GitHub Release. They are shipped as .zip because browsers
+           block downloads of unsigned .exe files (leaving an incomplete .crdownload). -->
+      <a class="btn-dl primary" href="https://github.com/supportpharaon/Pharaon/releases/latest/download/PharaonSetup.zip">
         <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M10 3v10M6 9l4 4 4-4M4 16h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         Download for Windows
-        <span class="dl-meta">Installer · v1.0.0 · 13 MB</span>
+        <span class="dl-meta">Installer · v1.0.0 · 12.5 MB (.zip)</span>
       </a>
-      <a class="btn-dl ghost" href="https://github.com/supportpharaon/Pharaon/releases/latest/download/Pharaon.exe">
+      <a class="btn-dl ghost" href="https://github.com/supportpharaon/Pharaon/releases/latest/download/Pharaon-Portable.zip">
         Portable version
-        <span class="dl-meta">Single .exe · 14 MB · no install</span>
+        <span class="dl-meta">No install · 14 MB (.zip)</span>
       </a>
     </div>
+    <p class="dl-note">Unzip and run — that's it. <span>Shipped as <code>.zip</code> because browsers block
+      unsigned <code>.exe</code> downloads.</span></p>
 
     <div class="trust-bar">
       <div class="trust-item">🔒 <b>100% private</b><span>your data never leaves your computer</span></div>
@@ -178,12 +180,17 @@
       <li><b>Automatic backups.</b> A daily backup is kept locally (last 7), and you can export/import a full
         JSON backup anytime.</li>
       <li><b>Verify your download.</b> After downloading, confirm the file is genuine by comparing its SHA-256
-        checksum (PowerShell: <code>Get-FileHash .\PharaonSetup.exe</code>):</li>
+        checksum (PowerShell: <code>Get-FileHash .\PharaonSetup.zip</code>):</li>
     </ul>
     <div class="hash-box">
-      <div><span class="hash-name">PharaonSetup.exe</span><code>97F1F680FFDBD06E559A205D89E7CA90B54D9EBA3D11DDB713452701E44C3D50</code></div>
-      <div><span class="hash-name">Pharaon.exe (portable)</span><code>00E9A6E9D5C3C7E31944F5A46910A73E863780B54DC0F4F1D61FEF1122F7D69B</code></div>
+      <div><span class="hash-name">PharaonSetup.zip</span><code>D4C2D3184395BB4A398AAC51F8B0D9218313C85D2EF5C46699D524D81555895A</code></div>
+      <div><span class="hash-name">Pharaon-Portable.zip</span><code>95EBD64E9358C5D9D50ECCAFEB22DF193E989A64F765D55ACED5B72B62501F06</code></div>
     </div>
+    <p class="fine"><b>Why a .zip?</b> Browsers block downloads of unsigned <code>.exe</code> files — the
+    download never finishes and you are left with a useless <code>.crdownload</code> file instead. Shipping
+    inside a <code>.zip</code> makes the download complete normally. Unzip it and run the executable inside.
+    The checksums of those executables are
+    <code>97F1F680…E44C3D50</code> (installer) and <code>00E9A6E9…22F7D69B</code> (portable).</p>
     <p class="fine"><b>About the Windows warning:</b> Pharaon is an independent student project and is not yet
     code-signed (certificates are costly). Windows SmartScreen may therefore show “Windows protected your PC”
     on first run — choose <em>More info → Run anyway</em> after verifying the checksum above. The full source
@@ -204,6 +211,11 @@
       entry, an uninstaller and optional launch-at-startup. The <b>portable</b> version is a single .exe you can
       run from anywhere (even a USB stick) with no installation. Both store data in the same place, so you can
       switch freely.</p></details>
+    <details><summary>Why is the download a .zip?</summary><p>Because browsers block downloads of unsigned
+      <code>.exe</code> files: the download never finishes and you end up with an unusable
+      <code>.crdownload</code> file. Inside a <code>.zip</code> the download completes normally — just unzip it
+      and run the executable inside. You can verify the archive with the
+      <a href="#security">SHA-256 checksums</a>.</p></details>
     <details><summary>What happens if I miss a day?</summary><p>Nothing is lost. The next morning, missed
       sessions come back as catch-ups — most fragile memories first — and the whole plan rebalances
       automatically, respecting your daily limits.</p></details>
@@ -229,10 +241,10 @@
     <h2>Study. Rate. Forget nothing.</h2>
     <p class="hero-sub">Free for Windows 10/11 · no account · your data never leaves your computer</p>
     <div class="cta-row center">
-      <a class="btn-dl primary" href="https://github.com/supportpharaon/Pharaon/releases/latest/download/PharaonSetup.exe">
+      <a class="btn-dl primary" href="https://github.com/supportpharaon/Pharaon/releases/latest/download/PharaonSetup.zip">
         <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M10 3v10M6 9l4 4 4-4M4 16h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         Download Pharaon
-        <span class="dl-meta">v1.0.0 · Windows installer</span>
+        <span class="dl-meta">v1.0.0 · Windows installer (.zip)</span>
       </a>
     </div>
   </div>

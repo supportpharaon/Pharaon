@@ -13,6 +13,7 @@ no account.
 
 - **[Download the installer](https://github.com/supportpharaon/Pharaon/releases/latest/download/PharaonSetup.zip)** (Windows 10/11) — unzip, run `PharaonSetup.exe`
 - **[Portable version](https://github.com/supportpharaon/Pharaon/releases/latest/download/Pharaon-Portable.zip)** — unzip, run `Pharaon.exe`, no installation
+- **[Phone & tablet](https://supportpharaon.github.io/Pharaon-mobile/)** — open on your phone and *Add to Home Screen*; same engine, fully offline ([source](https://github.com/supportpharaon/Pharaon-mobile))
 
 > Shipped as `.zip` because browsers block downloads of unsigned `.exe` files (the
 > download never completes and leaves a `.crdownload` file).

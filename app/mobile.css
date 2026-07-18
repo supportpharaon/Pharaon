@@ -1,0 +1,174 @@
+/* ═══════════════════════════════════════════════════════════════
+   PHARAON MOBILE — layout layer on top of the untouched styles.css
+   ≤ 900px  → bottom navigation, sheet modals, touch-sized targets
+   > 900px  → the desktop sidebar layout (tablets in landscape)
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Boot splash ──────────────────────────────────────────────── */
+#pySplash {
+  position: fixed; inset: 0; z-index: 9999;
+  background: var(--n050);
+  display: flex; align-items: center; justify-content: center;
+  transition: opacity .3s;
+}
+.splash-card { text-align: center; padding: 24px; max-width: 320px; }
+.splash-logo { width: 72px; height: 72px; border-radius: 50%; }
+.splash-title {
+  font-size: 20px; font-weight: 700; letter-spacing: 3px;
+  color: var(--n900); margin: 14px 0 22px;
+}
+.splash-track {
+  height: 4px; background: var(--n200); border-radius: 99px; overflow: hidden;
+}
+.splash-fill {
+  height: 100%; width: 0%; background: var(--n900);
+  border-radius: 99px; transition: width .4s ease;
+}
+.splash-msg { margin-top: 12px; font-size: 13px; color: var(--n500); }
+.splash-btn {
+  margin-top: 16px; padding: 9px 22px; border-radius: 8px; border: none;
+  background: var(--n900); color: #fff; font-family: inherit;
+  font-size: 14px; font-weight: 600; cursor: pointer;
+}
+
+/* ── Bottom navigation ────────────────────────────────────────── */
+.bottomnav {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+  display: none;
+  background: rgba(255,255,255,.96); backdrop-filter: blur(10px);
+  border-top: 1px solid var(--n200);
+  padding: 4px 4px calc(4px + env(safe-area-inset-bottom));
+}
+.bottomnav .nav-item, .bn-more {
+  flex: 1; display: flex; flex-direction: column; align-items: center;
+  gap: 2px; padding: 7px 2px 5px; border-radius: 10px;
+  color: var(--n400); font-size: 10.5px; font-weight: 600;
+  background: none; border: none; font-family: inherit; cursor: pointer;
+  -webkit-tap-highlight-color: transparent; touch-action: manipulation;
+}
+.bottomnav .nav-item.active, .bn-more.active { color: var(--n900); }
+.bottomnav .nav-item.active { background: var(--n100); }
+.bn-ic { width: 21px; height: 21px; }
+
+/* ── "More" sheet ─────────────────────────────────────────────── */
+.sheet-backdrop {
+  position: fixed; inset: 0; z-index: 70; background: rgba(20,20,19,.4);
+  opacity: 0; transition: opacity .2s;
+}
+.sheet-backdrop.show { opacity: 1; }
+.more-sheet {
+  position: fixed; left: 0; right: 0; z-index: 71;
+  bottom: 0; transform: translateY(102%);
+  background: var(--white); border-radius: 18px 18px 0 0;
+  padding: 8px 14px calc(16px + env(safe-area-inset-bottom));
+  box-shadow: 0 -12px 40px rgba(0,0,0,.18);
+  transition: transform .22s ease;
+}
+.more-sheet.show { transform: translateY(0); }
+.sheet-grab {
+  width: 38px; height: 4px; border-radius: 99px; background: var(--n200);
+  margin: 6px auto 12px;
+}
+.sheet-item {
+  display: flex; align-items: center; gap: 14px; width: 100%;
+  padding: 14px 10px; border-radius: 12px; border: none; background: none;
+  font-family: inherit; font-size: 15px; font-weight: 600; color: var(--n700);
+  cursor: pointer; text-align: left; -webkit-tap-highlight-color: transparent;
+}
+.sheet-item:active { background: var(--n100); }
+.sheet-item .bn-ic { width: 20px; height: 20px; color: var(--n500); }
+.sheet-stats {
+  display: flex; gap: 18px; justify-content: center;
+  padding: 12px 0 2px; margin-top: 6px; border-top: 1px solid var(--n100);
+  font-size: 13px; color: var(--n500);
+}
+
+/* ═══ PHONE LAYOUT (≤ 900px) ═════════════════════════════════════ */
+@media (max-width: 900px) {
+
+  .sidebar { display: none; }
+  .bottomnav { display: flex; }
+
+  .main {
+    height: 100vh; height: 100dvh;
+    padding-bottom: calc(64px + env(safe-area-inset-bottom));
+  }
+
+  /* Hero: compact */
+  .page-hero { padding: 18px 16px 14px; }
+  .hero-date { font-size: 21px; }
+  .hero-streak { right: 14px; padding: 8px 14px; }
+  .hero-streak-num { font-size: 24px; }
+  .content { padding: 16px 14px 28px; }
+
+  /* Touch targets */
+  .btn-icon { padding: 10px; min-width: 40px; min-height: 40px; }
+  .btn { padding: 10px 16px; touch-action: manipulation; }
+  .session-card { padding: 12px 12px; gap: 10px; }
+  .s-actions { gap: 5px; }
+  .s-why { display: none; }              /* tooltips are useless on touch — the
+                                            calendar day panel shows the reason */
+
+  /* Inputs: 16px prevents iOS focus-zoom */
+  .input, select.input, textarea.input { font-size: 16px; }
+
+  /* Modals become bottom sheets */
+  .modal-wrap {
+    align-items: flex-end !important;
+    padding: 0 !important;
+  }
+  .modal {
+    width: 100% !important; max-width: 100% !important;
+    max-height: 92dvh; overflow-y: auto;
+    border-radius: 18px 18px 0 0 !important;
+    padding-bottom: calc(12px + env(safe-area-inset-bottom));
+  }
+  .modal.modal-wide { width: 100% !important; }
+
+  /* Rating buttons: grid that fits a thumb */
+  .rating-v2 { display: grid !important; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+  .rating-v2-btn { padding: 10px 2px; }
+  .r-sub { display: none; }
+
+  /* Calendar: chips become colour bars; the tap-panel carries the detail */
+  .cal-cell-v2 { min-height: 58px; padding: 4px 3px; }
+  .cal-event {
+    font-size: 0; height: 6px; padding: 0;
+    border-radius: 3px; border-left-width: 0 !important;
+    margin-bottom: 3px;
+  }
+  .cal-day-tag { font-size: 7.5px; padding: 1px 4px; }
+  .cal-month-title { min-width: 0; font-size: 15px; }
+  .cal-header { flex-wrap: wrap; gap: 8px; }
+  .cal-legend { display: none; }
+  .cal-detail-row { flex-wrap: wrap; }
+
+  /* Grids collapse to one column */
+  .subject-grid { grid-template-columns: 1fr !important; }
+  .fitness-grid { grid-template-columns: 1fr !important; }
+
+  /* Section bars wrap instead of overflowing */
+  .section-bar { flex-wrap: wrap; gap: 8px; }
+
+  /* Exam cards tighter */
+  .exam-card { padding: 12px 12px; }
+
+  /* Toasts above the bottom nav */
+  .toast { bottom: calc(78px + env(safe-area-inset-bottom)) !important; }
+  .undo-toast { bottom: calc(78px + env(safe-area-inset-bottom)) !important; }
+
+  /* Desktop-only affordances */
+  .session-card:hover { box-shadow: none; }
+}
+
+/* Small phones */
+@media (max-width: 380px) {
+  .hero-streak { display: none; }
+  .prio-row { flex-wrap: wrap; }
+}
+
+/* ═══ TABLET PORTRAIT (600–900px): roomier grid ═════════════════ */
+@media (min-width: 600px) and (max-width: 900px) {
+  .subject-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .cal-cell-v2 { min-height: 74px; }
+}

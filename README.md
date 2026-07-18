@@ -13,7 +13,8 @@ no account.
 
 - **[Download the installer](https://github.com/supportpharaon/Pharaon/releases/latest/download/PharaonSetup.zip)** (Windows 10/11) — unzip, run `PharaonSetup.exe`
 - **[Portable version](https://github.com/supportpharaon/Pharaon/releases/latest/download/Pharaon-Portable.zip)** — unzip, run `Pharaon.exe`, no installation
-- **[Phone & tablet](https://supportpharaon.github.io/Pharaon/app/)** — open on your phone and *Add to Home Screen*; same engine, fully offline. Also packaged as [PharaonMobile.zip](https://github.com/supportpharaon/Pharaon/releases/latest/download/PharaonMobile.zip) (self-hostable). Source lives in this repo under [`app/`](app/).
+- **[Download for Android](https://github.com/supportpharaon/Pharaon/releases/latest/download/Pharaon.apk)** — independent `.apk` app (sideload; allow "install from this source"). Same engine as desktop.
+- **iPhone/iPad** — Apple only permits App Store installs: open [the web app](https://supportpharaon.github.io/Pharaon/app/) in Safari → Share → *Add to Home Screen*. Also packaged as [PharaonMobile.zip](https://github.com/supportpharaon/Pharaon/releases/latest/download/PharaonMobile.zip) (self-hostable). Source lives in this repo under [`app/`](app/); the Android domain verification lives at [`supportpharaon.github.io/.well-known/assetlinks.json`](https://supportpharaon.github.io/.well-known/assetlinks.json).
 
 > Shipped as `.zip` because browsers block downloads of unsigned `.exe` files (the
 > download never completes and leaves a `.crdownload` file).

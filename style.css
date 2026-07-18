@@ -87,9 +87,19 @@ code {
 .dl-meta { font-size: 12px; font-weight: 500; opacity: .65; }
 
 .dl-note {
-  font-size: 13.5px; color: var(--ink2); margin: -12px 0 24px;
+  font-size: 13.5px; color: var(--ink2); margin: -12px 0 14px;
 }
 .dl-note span { color: var(--n400); }
+.dl-points {
+  list-style: none; max-width: 640px; margin: 0 auto 26px;
+  text-align: left; display: flex; flex-direction: column; gap: 8px;
+}
+.dl-points li {
+  font-size: 13.5px; color: var(--n500); line-height: 1.6;
+  padding: 10px 14px; background: var(--n050);
+  border: 1px solid var(--n200); border-radius: var(--radius);
+}
+.dl-points li b { color: var(--ink); }
 .trust-bar {
   display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 46px;
 }
